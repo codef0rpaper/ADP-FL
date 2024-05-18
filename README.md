@@ -9,6 +9,8 @@ The integration of AI in the healthcare sector has marked significant advancemen
 ## Overview
 ![](https://github.com/codef0rpaper/ADP-FL/blob/main/image/overview.png)
 
+<div align=center>  <img src="https://github.com/codef0rpaper/ADP-FL/blob/main/image/miccai.drawio.png" width=50%></div>
+
 ## Requirements
 
 python >= 3.11
