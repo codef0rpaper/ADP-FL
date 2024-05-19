@@ -20,6 +20,48 @@ python >= 3.11
 pip install -r requirements.txt
 ```
 
+## Repo Structure
+
+```
+.
+├── README.md
+├── dataset // folder for dataset
+│   ├── Prostate
+│   │   ├── I2CVB.json
+│   │   ├── MSD.json
+│   │   ├── NCI_ISBI_3T.json
+│   │   ├── NCI_ISBI_DX.json
+│   │   ├── Promise12.json
+│   │   └── ProstateX.json
+│   ├── RSNA-ICH
+│   │   └── binary_25k
+│   │       ├── df_binary25k.csv
+│   │       ├── test.csv
+│   │       ├── train.csv
+│   │       └── validate.csv
+│   └── dataset.py 
+├── fed // Class for center and client
+│   ├── global_trainer.py // class for center server
+│   └── local_trainer.py // class for distributed client
+├── fed_main.py // main function
+├── image // image in README
+│   ├── miccai.drawio.png
+│   └── overview.png
+├── nets // folder for models
+│   ├── __init__.py
+│   └── models.py // include Unets and DenseNet121
+├── requirements.txt 
+├── requirements_cpu.txt
+├── run_exp.sh
+└── utils
+    ├── __init__.py
+    ├── datasets.py // method of dataset processing
+    ├── loss.py // Loss Function
+    ├── nova_utils.py // setup function
+    ├── util.py // setup function
+    └── workflow.py // setup function
+```
+
 ## Usage
 
 ```bash
