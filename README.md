@@ -119,6 +119,23 @@ Werkzeug==3.0.1
     └── workflow.py // setup function
 ```
 
+### Files Description
+- `./fed_main.py` : The script orchestrates the training process for a federated learning model, coordinating between multiple clients and a central server to aggregate updates, handle data splitting and loading, manage logging, and ensure proper model training and evaluation across different sites using PyTorch.
+
+- `./fed/global_trainer.py` : The script coordinates the training process for a federated learning model. It manages the interaction between multiple clients and a central server, handles data splitting and loading, and ensures proper model training and evaluation across different sites using PyTorch, all while logging progress and metrics. The script includes detailed handling of differential privacy, adaptive training rounds, and different aggregation methods like FedSGD, FedAdam, and FedRMSprop.
+
+- `./fed/local_trainer.py` : The script is a detailed implementation of a federated learning local update procedure using PyTorch. This script focuses on training local models with differentially private mechanisms to ensure privacy during the federated learning process. 
+
+- `./nets/models.py` : The script provided defines two neural network models in PyTorch: UNet and DenseNet.
+
+- `./utils/datasets.py` : The script provides a class for loading and processing medical image datasets, including the ability to load and preprocess images from different sources, such as the ProstateX dataset, the RSNA Intracranial Hemorrhage dataset, and the NCI-ISBI Challenge 2013 dataset. The script also includes methods for data augmentation and normalization.
+
+- `./utils/loss.py` : The script provides a class for computing the loss function for the federated learning model. The script includes the ability to compute the cross-entropy loss and the Dice loss, which are commonly used in medical image segmentation tasks.
+
+- `./utils/nova_utils.py` : The script provides a class for handling the Nova environment, including the ability to set up the environment, load the dataset, and train the model.
+
+- `./utils/util.py` : The script provides several utility functions and setups commonly used in federated learning (FL) and deep learning experiments. These include logging setup, argument parsing, and various metric calculations. 
+
 ## Usage
 
 ```bash
